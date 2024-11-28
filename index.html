@@ -1,29 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Password generator app</title>
-</head>
-<body>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet/less" type="text/css" href="styles.less" />
+		<script src="https://cdn.jsdelivr.net/npm/less"></script>
+		<script src="script.js" defer></script>
 
-  Password Generator
-
-  P4$5W0rD!
-
-  Character Length
-
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
-
-  Strength
-
-  Generate
-
-</body>
+		<title>Frontend Mentor | Password generator app</title>
+	</head>
+	<body>
+		<main>
+			<h1>Password Generator</h1>
+			<form class="container">
+				<fieldset class="pwd">
+					<input class="pwd__input" type="text" placeholder="P4$5W0rD!" />
+					<button class="pwd__copy"></button>
+				</fieldset>
+				<div class="settings">
+					<fieldset class="settings__char-slider">
+						<label for="char-slider" class="char-slider__label"
+							>Character Length<span class="char-slider__num">10</span></label
+						>
+						<input
+							type="range"
+							min="1"
+							max="20"
+							value="10"
+							class="char-slider__slider"
+							id="char-slider"
+						/>
+					</fieldset>
+					<fieldset class="settings__checkboxes">
+						<label class="checkbox__label"
+							>Include Uppercase Letters
+							<input class="checkbox" type="checkbox" />
+							<span class="checkmark"></span>
+						</label>
+						<label class="checkbox__label"
+							>Include Lowercase Letters
+							<input class="checkbox" type="checkbox" />
+							<span class="checkmark"></span>
+						</label>
+						<label class="checkbox__label"
+							>Include Numbers
+							<input class="checkbox" type="checkbox" />
+							<span class="checkmark"></span>
+						</label>
+						<label class="checkbox__label"
+							>Include Symbols
+							<input class="checkbox" type="checkbox" />
+							<span class="checkmark"></span>
+						</label>
+					</fieldset>
+					<div class="display">
+						<h3 class="display__title">Strength</h3>
+						<p class="display__strength-name">Medium</p>
+					</div>
+					<button>Generate</button>
+				</div>
+			</form>
+		</main>
+	</body>
 </html>
