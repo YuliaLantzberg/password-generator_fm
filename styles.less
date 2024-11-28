@@ -1,3 +1,4 @@
+// CSS RESET
 /* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
@@ -65,4 +66,44 @@ h6 {
 #root,
 #__next {
 	isolation: isolate;
+}
+
+// Variables
+
+// Colors
+@grey-800: #24232c;
+@grey-500: #817092;
+@grey-100: #e6e5ea;
+@grey-900: #18171f;
+@green-200: #a4ffaf;
+@red-400: #f64a4a;
+@orange-300: #fb7c58;
+@yellow-300: #f8c065;
+
+// Typography
+
+@ff-regular: "JetBrains Mono", serif;
+@fw-regular: 700;
+@fs-regular: 1.125rem;
+@lh-regular: 1.27;
+
+@fs-medium: 1.5rem;
+@lh-medium: 1.29;
+
+@fs-large: 2rem;
+@lh-large: 1.34;
+
+.heading-regular {
+	font-size: @fs-regular;
+	line-height: @lh-regular;
+}
+
+.heading-medium {
+	font-size: @fs-medium;
+	line-height: @lh-medium;
+}
+
+.heading-large {
+	font-size: @fs-large;
+	line-height: @lh-large;
 }
