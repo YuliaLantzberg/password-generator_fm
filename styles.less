@@ -83,6 +83,8 @@ h6 {
 // Typography
 
 @ff-regular: "JetBrains Mono", serif;
+@fs-regular-small: 1rem;
+
 @fw-regular: 700;
 @fs-regular: 1.125rem;
 @lh-regular: 1.27;
@@ -112,6 +114,7 @@ h6 {
 body {
 	font-family: @ff-regular;
 	font-weight: @fw-regular;
+	// font-size
 	background-color: @gray-900;
 	color: @gray-100;
 	display: flex;
@@ -180,6 +183,16 @@ fieldset {
 			flex-direction: column;
 			gap: 1rem;
 
+			.char-slider__label {
+				display: flex;
+				justify-content: space-between;
+
+				.char-slider__num {
+					color: @green-200;
+					.heading-medium();
+				}
+			}
+
 			.char-slider__slider {
 				appearance: none;
 				-webkit-appearance: none;
@@ -207,6 +220,72 @@ fieldset {
 				background: @gray-100;
 				pointer-events: auto;
 				cursor: pointer;
+			}
+		}
+
+		.settings__checkboxes {
+			padding: 1rem;
+			display: flex;
+			flex-direction: column;
+
+			.checkbox {
+				width: 1.25rem;
+				height: 1.25rem;
+				appearance: none;
+				-webkit-appearance: none;
+				background-color: transparent;
+				border: 2px solid @gray-100;
+				cursor: pointer;
+				position: relative;
+			}
+
+			.checkbox:checked {
+				background-color: @green-200;
+				border: 1px solid @green-200;
+			}
+
+			.checkbox:checked::after {
+				content: url(assets/images/icon-check.svg);
+				position: absolute;
+				left: 0.175rem;
+				top: -0.075rem;
+			}
+		}
+
+		.settings__display {
+			display: flex;
+			background-color: @gray-900;
+			padding: 1rem;
+			justify-content: space-between;
+			align-items: center;
+			text-transform: uppercase;
+			.display__title {
+				color: @gray-500;
+				font-size: 1rem;
+			}
+
+			.display__info {
+				display: flex;
+				gap: 1rem;
+				align-items: center;
+				.display__strength-name {
+					color: @gray-100;
+				}
+
+				.display__scale {
+					display: flex;
+					gap: 0.5rem;
+					.scale__el {
+						min-height: 1.75rem;
+						min-width: 0.625rem;
+						border: 2px solid @gray-100;
+
+						&:not(:last-child) {
+							background-color: @orange-300;
+							border: none;
+						}
+					}
+				}
 			}
 		}
 	}

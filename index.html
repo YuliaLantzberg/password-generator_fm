@@ -35,7 +35,6 @@
 						<label for="char-slider" class="char-slider__label"
 							>Character Length<span class="char-slider__num">10</span></label
 						>
-						<!-- <div class="input-wrapper"> -->
 						<input
 							type="range"
 							min="1"
@@ -45,33 +44,40 @@
 							id="char-slider"
 							oninput="slideLength()"
 						/>
-						<!-- </div> -->
 					</fieldset>
 					<fieldset class="settings__checkboxes">
-						<label class="checkbox__label"
-							>Include Uppercase Letters
-							<input class="checkbox" type="checkbox" />
+						<label class="checkbox__label">
+							<input class="checkbox" type="checkbox" checked />
 							<span class="checkmark"></span>
+							Include Uppercase Letters
 						</label>
-						<label class="checkbox__label"
-							>Include Lowercase Letters
-							<input class="checkbox" type="checkbox" />
+						<label class="checkbox__label">
+							<input class="checkbox" type="checkbox" checked />
 							<span class="checkmark"></span>
+							Include Lowercase Letters
 						</label>
-						<label class="checkbox__label"
-							>Include Numbers
-							<input class="checkbox" type="checkbox" />
+						<label class="checkbox__label">
+							<input class="checkbox" type="checkbox" checked />
 							<span class="checkmark"></span>
+							Include Numbers
 						</label>
-						<label class="checkbox__label"
-							>Include Symbols
+						<label class="checkbox__label">
 							<input class="checkbox" type="checkbox" />
 							<span class="checkmark"></span>
+							Include Symbols
 						</label>
 					</fieldset>
-					<div class="display">
+					<div class="settings__display">
 						<h3 class="display__title">Strength</h3>
-						<p class="display__strength-name">Medium</p>
+						<div class="display__info">
+							<p class="display__strength-name">Medium</p>
+							<div class="display__scale">
+								<div class="scale__el"></div>
+								<div class="scale__el"></div>
+								<div class="scale__el"></div>
+								<div class="scale__el"></div>
+							</div>
+						</div>
 					</div>
 					<button>Generate</button>
 				</div>
