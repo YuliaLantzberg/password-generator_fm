@@ -24,7 +24,7 @@
 	</head>
 	<body>
 		<main>
-			<h1>Password Generator</h1>
+			<h1 class="title">Password Generator</h1>
 			<form class="container">
 				<fieldset class="pwd">
 					<input class="pwd__input" type="text" placeholder="P4$5W0rD!" />
@@ -35,6 +35,7 @@
 						<label for="char-slider" class="char-slider__label"
 							>Character Length<span class="char-slider__num">10</span></label
 						>
+						<!-- <div class="input-wrapper"> -->
 						<input
 							type="range"
 							min="1"
@@ -42,7 +43,9 @@
 							value="10"
 							class="char-slider__slider"
 							id="char-slider"
+							oninput="slideLength()"
 						/>
+						<!-- </div> -->
 					</fieldset>
 					<fieldset class="settings__checkboxes">
 						<label class="checkbox__label"
