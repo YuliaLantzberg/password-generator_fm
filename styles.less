@@ -205,22 +205,22 @@ fieldset {
 		}
 
 		.pwd__copy {
-			.flex-align-center(space-between);
-			gap: @sp-1;
-			p {
-				color: @green-200;
-				text-transform: uppercase;
-				display: none;
-			}
-
 			.copy-btn {
 				border: none;
 				background-repeat: no-repeat;
 				background-color: transparent;
 				cursor: pointer;
+				.flex-center();
+				gap: @sp-1;
 
 				&:hover path {
 					fill: white;
+				}
+
+				p {
+					color: @green-200;
+					text-transform: uppercase;
+					display: none;
 				}
 			}
 		}
