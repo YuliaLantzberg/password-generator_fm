@@ -50,7 +50,7 @@ function handleStrength() {
 	});
 	const lengthSmall = 6;
 	const lengthMedium = 12;
-	const lengthBig = 18;
+	const lengthBig = 16;
 
 	const rangeValue = +rangeSlide.value;
 

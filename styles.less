@@ -162,6 +162,7 @@ main {
 	place-content: center;
 	text-align: center;
 	padding: clamp(0rem, 2.8vw, 2.5rem) 1rem;
+	max-width: 33.75rem;
 }
 
 fieldset {
@@ -188,11 +189,16 @@ fieldset {
 	display: grid;
 	gap: @sp-1;
 
+	@media (min-width: 48rem) {
+		width: 33.75rem;
+	}
+
 	.pwd {
 		.flex-align-center(space-between);
 		.inner-space-1();
 		background-color: @gray-800;
 		color: white;
+		.heading-large();
 
 		.pwd__display.empty {
 			opacity: 0.25;
@@ -280,23 +286,28 @@ fieldset {
 			flex-direction: column;
 			gap: min(4.26vw, 1.25rem);
 
-			.checkbox {
-				.sizes(1.25rem, 1.25rem);
-				.webkit-appearance-none();
-				background-color: transparent;
-				border: 2px solid @gray-100;
-				cursor: pointer;
-				position: relative;
-			}
+			.checkbox__label {
+				.flex-align-center(flex-start);
+				gap: clamp(0.5rem, 2vw, 1rem);
+				.heading-body();
+				.checkbox {
+					.sizes(1.25rem, 1.25rem);
+					.webkit-appearance-none();
+					background-color: transparent;
+					border: 2px solid @gray-100;
+					cursor: pointer;
+					position: relative;
+				}
 
-			.checkbox:checked {
-				background-color: @green-200;
-				border: 1px solid @green-200;
-			}
+				.checkbox:checked {
+					background-color: @green-200;
+					border: 1px solid @green-200;
+				}
 
-			.checkbox:checked::after {
-				content: url(assets/images/icon-check.svg);
-				.position-absolute(-0.175rem, 0.1rem);
+				.checkbox:checked::after {
+					content: url(assets/images/icon-check.svg);
+					.position-absolute(-0.175rem, 0.1rem);
+				}
 			}
 		}
 
