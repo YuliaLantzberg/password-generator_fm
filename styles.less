@@ -184,23 +184,16 @@ fieldset {
 	gap: @sp-1;
 
 	.pwd {
-		position: relative;
-		.flex-center();
+		.flex-align-center(space-between);
+		.inner-space-1();
+		background-color: @gray-800;
+		color: white;
 
-		.pwd__input {
-			width: 100%;
-			background-color: @gray-800;
-			border: none;
-			padding: @sp-1;
-			color: white;
-			.heading-large();
-			&[placeholder] {
-				opacity: 0.25;
-			}
+		&.empty .pwd__display {
+			opacity: 0.25;
 		}
 
 		.pwd__copy {
-			.position-absolute(1.5rem, 2rem);
 			// background-image: url("assets/images/icon-copy.svg");
 			border: none;
 			background-repeat: no-repeat;

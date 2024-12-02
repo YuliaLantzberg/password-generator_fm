@@ -26,8 +26,8 @@
 		<main>
 			<h1 class="title">Password Generator</h1>
 			<form class="container">
-				<fieldset class="pwd">
-					<input class="pwd__input" type="text" placeholder="P4$5W0rD!" />
+				<div class="pwd empty">
+					<p class="pwd__display">P4$5W0rD!</p>
 					<button class="pwd__copy">
 						<svg width="21" height="24" xmlns="http://www.w3.org/2000/svg">
 							<path
@@ -36,7 +36,7 @@
 							/>
 						</svg>
 					</button>
-				</fieldset>
+				</div>
 				<div class="settings">
 					<fieldset class="settings__char-slider">
 						<label for="char-slider" class="char-slider__label"
@@ -86,7 +86,7 @@
 							</div>
 						</div>
 					</div>
-					<button class="btn">
+					<button class="btn" id="generate-btn">
 						Generate
 						<svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
 							<path
